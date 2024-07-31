@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Sustentável</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .imagem {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+        .imagem:hover {
+            transform: scale(1.1);
+        }
+        .imagem img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #descricao {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .secao {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+        .secao h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .secao p, .secao ul {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agricultura Sustentável</h1>
+
+    <div class="imagem" onclick="mostrarDescricao('img1')">
+        <img src="https://static.wixstatic.com/media/97bb3a_eb3362e77d264cb4b40981c26a47d421~mv2.jpg/v1/fill/w_1000,h_763,al_c,q_90,usm_0.66_1.00_0.01/97bb3a_eb3362e77d264cb4b40981c26a47d421~mv2.jpg" alt="Imagem 1">
+    </div>
+
+    <div class="imagem" onclick="mostrarDescricao('img2')">
+        <img src="https://blog.sensix.ag/wp-content/uploads/2021/06/agricultura-de-precisao-6.jpg" alt="Imagem 2">
+    </div>
+
+    <div class="imagem" onclick="mostrarDescricao('img3')">
+        <img src="https://blog.portalpos.com.br/app/uploads/2022/08/o-que-%C3%A9-agricultura-de-precis%C3%A3o.jpg" alt="Imagem 3">
+    </div>
+
+    <div id="descricao">
+        <p>Selecione uma imagem acima para ver a descrição correspondente.</p>
+    </div>
+
+    <div class="secao">
+        <h2>Técnicas de Agricultura Sustentável</h2>
+        <p>A agricultura sustentável utiliza diversas técnicas para promover a conservação ambiental e a eficiência na produção de alimentos:</p>
+        <ul>
+            <li><strong>Agroecologia:</strong> Integração de práticas agrícolas com princípios ecológicos.</li>
+            <li><strong>Rotação de culturas:</strong> Alternância de diferentes cultivos para melhorar a fertilidade do solo.</li>
+            <li><strong>Compostagem:</strong> Reciclagem de resíduos orgânicos para produção de adubo.</li>
+            <li><strong>Uso eficiente de água:</strong> Técnicas como irrigação por gotejamento e captação de água da chuva.</li>
+        </ul>
+    </div>
+
+    <div class="secao">
+        <h2>Benefícios da Agricultura Sustentável</h2>
+        <p>Agricultura sustentável traz uma série de benefícios tanto para o ambiente quanto para os agricultores e consumidores:</p>
+        <ul>
+            <li><strong>Preservação do meio ambiente:</strong> Redução da erosão do solo e uso sustentável dos recursos naturais.</li>
+            <li><strong>Alimentos mais saudáveis:</strong> Menor uso de pesticidas e fertilizantes químicos resulta em produtos mais seguros e nutritivos.</li>
+            <li><strong>Resiliência às mudanças climáticas:</strong> Práticas que ajudam a adaptar-se às variações climáticas e mitigar os impactos ambientais.</li>
+            <li><strong>Desenvolvimento rural sustentável:</strong> Melhora na qualidade de vida dos agricultores e comunidades rurais.</li>
+        </ul>
+    </div>
+
+    <div class="secao">
+        <h2>Recursos Adicionais</h2>
+        <p>Explore mais sobre agricultura sustentável com esses recursos:</p>
+        <ul>
+            <li><a href="https://www.agriculturasustentavel.org.br" target="_blank">Associação Brasileira de Agricultura Sustentável</a></li>
+            <li><a href="https://www.fao.org/agricultura/sustentavel" target="_blank">Organização das Nações Unidas para Alimentação e Agricultura (FAO) - Agricultura Sustentável</a></li>
+            <li><a href="https://www.embrapa.br/agricultura-sustentavel" target="_blank">Embrapa Agricultura Sustentável</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Agricultura Sustentável. Todos os direitos reservados. | Desenvolvido por <a href="https://www.seuwebsite.com" target="_blank">Seu Nome</a></p>
+    </footer>
+
+    <script>
+        function mostrarDescricao(imagem) {
+            let descricao = "";
+            switch (imagem) {
+                case 'img1':
+                    descricao = "Descrição da imagem 1 - Agricultura sustentável: cultivo de hortaliças orgânicas.";
+                    break;
+                case 'img2':
+                    descricao = "Descrição da imagem 2 - Agricultura agroflorestal: integração de árvores com cultivos.";
+                    break;
+                case 'img3':
+                    descricao = "Descrição da imagem 3 - Práticas de irrigação sustentável em plantações.";
+                    break;
+                default:
+                    descricao = "Descrição não encontrada.";
+            }
+            document.getElementById('descricao').innerHTML = "<p>" + descricao + "</p>";
+        }
+    </script>
+</body>
+</html>
